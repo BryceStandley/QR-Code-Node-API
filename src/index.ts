@@ -100,7 +100,14 @@ app.get('/qr', referrerCheck, async (c) => {
         //const binaryData = Buffer.from(base64Data, 'base64');
         
         const qr = new QRCode(options);
-        return new Response(qr.svg(), { headers: { "Content-Type": "image/svg+xml" } });
+        return new Response(qr.svg(), { 
+            headers: {
+                "Content-Type": "image/svg+xml",
+                'Access-Control-Allow-Methods': 'GET',
+                'Access-Control-Allow-Origin': '*.costagroup.com.au',
+                'Access-Control-Allow-Headers': 'Content-Type'
+            } 
+        });
 
     // Return the PNG image
     //return new Response(binaryData, {
