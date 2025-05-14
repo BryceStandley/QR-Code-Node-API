@@ -3,14 +3,31 @@
     "body-parser": "^2.2.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "qrcode": "^1.5.4"
+    "express-rate-limit": "^7.5.0",
+    "morgan": "^1.10.0",
+    "qrcode": "^1.5.4",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.1",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^22.15.17",
     "@types/qrcode": "^1.5.5",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
-  }
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "tsx src/app.ts"
+  },
+  "type": "module",
+  "main": "dist/app.js",
+  "name": "qr-code-node-api",
+  "version": "1.0.0",
+  "description": "A simple QR code generator API using Node.js and Express.",
+  "author": "Bryce Standley",
+  "license": "MIT"
 }
