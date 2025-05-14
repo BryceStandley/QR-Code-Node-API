@@ -104,8 +104,7 @@ app.get('/qr', referrerCheck, async (c) => {
             headers: {
                 "Content-Type": "image/svg+xml",
                 'Access-Control-Allow-Methods': 'GET',
-                'Access-Control-Allow-Origin': '*.costagroup.com.au',
-                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
                 'Cross-Origin-Resource-Policy': 'cross-origin',
             } 
         });
