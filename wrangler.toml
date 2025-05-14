@@ -1,0 +1,10 @@
+name = "qr-code-api"
+main = "src/index.ts"
+compatibility_date = "2024-05-01"
+nodejs_compat = true
+
+[vars]
+ALLOWED_DOMAINS = "costagroup.com.au,vectorpixel.net"
+
+[build]
+command = "npm run build"
